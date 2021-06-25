@@ -1,10 +1,17 @@
-import './App.css';
+import 'semantic-ui-css/semantic.min.css'
+import NavBar from './NavBar/NavBar';
+import RecommendedVideos from './RecommendedVideos/RecVideos';
+import SearchBar from './SearchBar/SearchBar';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <div className="Container">
+      <NavBar />
+      <SearchBar />
     </div>
+      </div>
   );
 }
 
