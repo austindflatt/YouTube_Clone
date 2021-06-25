@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css'
-/* import NavBar from './NavBar/NavBar';
-import RecommendedVideos from './RecommendedVideos/RecVideos';
-import SearchBar from './SearchBar/SearchBar'; */
+import NavBar from './NavBar/NavBar';
+/*import RecommendedVideos from './RecommendedVideos/RecVideos';*/
+import SearchBar from './SearchBar/SearchBar'; 
 import { apikey } from '../apikey';
 
 class App extends Component {
@@ -15,7 +15,8 @@ class App extends Component {
     console.log(apikey)
     return (
     <div>
-      <h1>Hello World</h1>
+      <NavBar/>
+      <SearchBar/>
     </div>
     )
   }
