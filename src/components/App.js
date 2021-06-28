@@ -4,6 +4,7 @@ import 'semantic-ui-css/semantic.min.css'
 import { Container, Divider, Icon } from 'semantic-ui-react'
 import NavBar from './NavBar/NavBar';
 import Comments from './Comments/Comments';
+import CommentForm from './CommentForm/CommentForm';
 import RecommendedVideos from './RecommendedVideos/RecVideos';
 import SearchBar from './SearchBar/SearchBar'; 
 import { apikey } from '../apikey';
@@ -18,7 +19,7 @@ class App extends Component {
       relatedVideos: []
     }
   }
-  
+
 
   componentDidMount() {
   }
@@ -40,8 +41,9 @@ class App extends Component {
         src={`https://www.youtube.com/embed/${this.state.videoId}?`}
           frameBorder="0"><br/>
       </iframe>
-      <h3>{this.state.videoDescription} Video Description Goes here</h3>
+      <p>{this.state.videoDescription} Video Description Goes here</p>
       <Comments/>
+      <CommentForm/>
       </Container>
     </div>
     </React.Fragment>
