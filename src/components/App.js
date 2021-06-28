@@ -1,10 +1,10 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import 'semantic-ui-css/semantic.min.css'
 import { Container, Divider, Icon } from 'semantic-ui-react'
 import NavBar from './NavBar/NavBar';
 import Comments from './Comments/Comments';
-/*import RecommendedVideos from './RecommendedVideos/RecVideos';*/
+import RecommendedVideos from './RecommendedVideos/RecVideos';
 import SearchBar from './SearchBar/SearchBar'; 
 import { apikey } from '../apikey';
 
@@ -15,8 +15,10 @@ class App extends Component {
       videoId: 'MRIMT0xPXFI',
       videoTitle: '',
       videoDescription: '',
+      relatedVideos: []
     }
   }
+  
 
   componentDidMount() {
   }
@@ -25,6 +27,7 @@ class App extends Component {
   render() {
     console.log(apikey)
     return (
+    <React.Fragment>
     <div>
       <Container>
       <Divider />
@@ -41,6 +44,7 @@ class App extends Component {
       <Comments/>
       </Container>
     </div>
+    </React.Fragment>
     )
   }
 }
