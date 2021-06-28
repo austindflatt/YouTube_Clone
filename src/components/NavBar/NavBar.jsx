@@ -8,12 +8,6 @@ function NavBar () {
           <Menu.Item
             name='home'
           />
-          <Menu.Item
-            name='messages'
-          />
-          <Menu.Item
-            name='friends'
-          />
         </Menu>
       </Segment>
     )

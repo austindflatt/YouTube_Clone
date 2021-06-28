@@ -1,19 +1,16 @@
-import React from 'react';
-/*import { Search, Grid, Header, Segment } from 'semantic-ui-react'*/
+import React, { Component } from 'react';
+import { Input, Form, Button } from 'semantic-ui-react'
 
 const SearchBar = () => (
-    <form action="/" method="get">
-        <label htmlFor="header-search">
-            <span className="visually-hidden">Search Youtube Video</span>
-        </label>
+    <Form action="/" method="get">
         <input
             type="text"
             id="header-search"
-            placeholder="Search Youtube posts"
+            placeholder="Search Youtube Videos"
             name="s" 
         />
-        <button type="submit">Search</button>
-    </form>
+        <Button type="submit">Search</Button>
+    </Form>
 );
 
 export default SearchBar;
