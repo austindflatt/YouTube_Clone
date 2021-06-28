@@ -21,18 +21,6 @@ class App extends Component {
   componentDidMount() {
   }
 
-  titleAndDescription = async (videoId) => {
-    if (videoId === undefined){
-        videoId = 'MRIMT0xPXFI';
-    }
-    let response = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${this.state.videoId}&key=${apikey.googleAPIKey}`);
-    console.log(response.data);
-    this.setState({
-        videoTitle: response.data.items[0].snippet.title,
-        videoDescription: response.data.items[0].snippet.description
-    })
-}
-
 
   render() {
     console.log(apikey)
