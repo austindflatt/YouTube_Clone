@@ -24,6 +24,18 @@ class App extends Component {
   componentDidMount() {
   }
 
+  handleSubmit = async (searchTerm) => {
+		const response = await axios.get('search', {
+			params: {
+				part: 'snippet',
+				maxResults: 5,
+				key: 'AIzaSyAt_B5ZicG7MStP0YQLrvmFvup_keYvZ3Q',
+				q: searchTerm
+			}
+		});
+
+		this.setState({ videos: response.data.items, selectedVideo: response.data.items[0] });
+	};
 
   render() {
     console.log(apikey)
