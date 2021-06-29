@@ -14,7 +14,7 @@ class App extends Component {
     super(props);
     this.state = {
       videoId: 'MRIMT0xPXFI',
-      videoTitle: '',
+      videoTitle: 'Test',
       videoDescription: '',
       relatedVideos: []
     }
@@ -41,7 +41,7 @@ class App extends Component {
         src={`https://www.youtube.com/embed/${this.state.videoId}?`}
           frameBorder="0"><br/>
       </iframe>
-      <p>{this.state.videoDescription} Video Description Goes here</p>
+      <p>{this.state.videoDescription}</p>
       <Comments/>
       <CommentForm/>
       </Container>
