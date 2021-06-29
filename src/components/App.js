@@ -33,7 +33,7 @@ class App extends Component {
       <Container>
       <Divider />
       <NavBar/>
-      <SearchBar/>
+      <SearchBar onFormSubmit={this.handleSubmit} />
       <h1>Youtube Clone <Icon name='video' size='small' /></h1>
       <Divider />
       <h1>{this.state.videoTitle}</h1>
