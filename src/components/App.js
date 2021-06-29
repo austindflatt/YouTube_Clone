@@ -14,7 +14,7 @@ class App extends Component {
     super(props);
     this.state = {
       videoId: 'MRIMT0xPXFI',
-      videoTitle: 'Test',
+      videoTitle: '',
       videoDescription: '',
       relatedVideos: []
     }
